@@ -17,7 +17,7 @@ class VPNParser(HTMLParser):
 print("Connecting to vpnbook.com...")
 try:
     parser = VPNParser()
-    parser.feed(str(urlopen("http://www.vpnbook.com/").read()),)
+    parser.feed(str(urlopen("http://www.vpnbook.com/").read()))
     open("vpnbook.txt", "w").writelines(parser.auth.values())
 except Exception as error:
     print(error)
